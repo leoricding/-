@@ -1,0 +1,9 @@
+/* pages/lession/lession.wxss */
+.swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.swiper-img{
+  width: 100%;
+  height: 100%;
+}

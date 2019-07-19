@@ -1,0 +1,10 @@
+<!--pages/lession/lession.wxml-->
+<view>
+  <swiper class='swiper' indicator-dots='true' autoplay='true' indicator-color='#00a00f' indicator-active-color='#FFE4C4'>
+    <block wx:for="{{listData}}" wx:key="{{index}}">
+      <swiper-item class='swiper-item'>
+        <image class='swiper-img' src='{{item.carousel}}'></image>
+      </swiper-item>
+    </block>
+  </swiper> 
+</view>
