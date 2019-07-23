@@ -1,4 +1,5 @@
 /* pages/lession/lession.wxss */
+@import "/pages/template/lession1-template.wxss"
 .swiper{
   width: 100%;
   height: 400rpx;

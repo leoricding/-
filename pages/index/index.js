@@ -47,6 +47,7 @@ Page({
           hasUserInfo: true
         })
       }
+      this.routerGo()
     } else {
       // 微信不支持button.open-type.getUserInfo用法
       // 在没有 open-type=getUserInfo 版本的兼容处理

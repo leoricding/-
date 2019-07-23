@@ -1,2 +1,25 @@
 <!--pages/template/lession1-template.wxml-->
-<text>pages/template/lession1-template.wxml</text>
+<template name="lession1-template">
+  <view class='less-tmp-container'>
+    <view class='less-img-container'>
+      <image class='less-img' src="{{carousel}}"></image>
+    </view>
+    <view class='less-content-container'>
+      <view class='less-content-name'>
+        <text>{{lessionName}}</text>
+      </view>
+      <view class='less-online-animate'>
+        <view class='less-online-animate-0'></view>
+        <view class='less-online-animate-1'></view>
+        <view class='less-online-animate-2'></view>
+        <view class='less-online-animate-3'></view>
+        <view class='less-online-animate-4'>
+          <text>直播中</text>
+        </view>
+      </view>
+      <view class='less-content-person'>
+        <text>{{persionOnline}}人在上课</text>
+      </view>  
+    </view>
+  </view>
+</template>

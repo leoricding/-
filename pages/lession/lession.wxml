@@ -1,4 +1,5 @@
 <!--pages/lession/lession.wxml-->
+<import src="/pages/template/lession1-template.wxml" />
 <view>
   <swiper class='swiper' indicator-dots='true' autoplay='true' indicator-color='#00a00f' indicator-active-color='#FFE4C4'>
     <block wx:for="{{listData}}" wx:key="{{index}}">
@@ -7,4 +8,9 @@
       </swiper-item>
     </block>
   </swiper> 
+  <view>
+    <block wx:for="{{listData}}" wx:key="{{index}}">
+      <template is="lession1-template" data="{{...item}}" />
+    </block>
+  </view>
 </view>
