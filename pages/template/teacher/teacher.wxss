@@ -1,0 +1,29 @@
+.teacher-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding:20rpx;
+  box-sizing: border-box;
+  height: 160rpx;
+}
+.teacher-avatar{
+  margin-right: 20rpx;
+}
+.teacher-avatar image{
+  border-radius: 60rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.teacher-detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.teacher-position{
+  font-size: 1rem;
+}
+.teacher-achievement{
+  font-size: 0.4rem;
+  color: grey;
+}

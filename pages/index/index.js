@@ -92,7 +92,8 @@ Page({
         console.log(wx.createSelectorQuery().select('image'))
         // 跳转
         // 跳转成功后执行回调函数clearInterval
-        wx.navigateTo({
+        // 这里必须使用switchTab，因为设置了tabbar，navigateTo无法实现跳转
+        wx.switchTab({
           url: './../lession/lession',
           success:()=>{
             console.log(this)

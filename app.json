@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/lession/lession",
-    "pages/logs/logs"
+    "pages/lessionDetail/lessionDetail",
+    "pages/logs/logs"    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,5 +11,21 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/lession/lession",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
+  }
 }

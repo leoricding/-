@@ -1,5 +1,7 @@
 <!--pages/lession/lession.wxml-->
+<!-- 引用模板 -->
 <import src="/pages/template/lession1-template.wxml" />
+<!-- 轮播图 -->
 <view>
   <swiper class='swiper' indicator-dots='true' autoplay='true' indicator-color='#00a00f' indicator-active-color='#FFE4C4'>
     <block wx:for="{{listData}}" wx:key="{{index}}">
@@ -8,9 +10,12 @@
       </swiper-item>
     </block>
   </swiper> 
+  <!-- 循环渲染模板 -->
   <view>
     <block wx:for="{{listData}}" wx:key="{{index}}">
-      <template is="lession1-template" data="{{...item}}" />
+      <view catchtap="toLessionDetail" data-index="{{index}}">
+        <template is="lession1-template" data="{{...item}}" />
+      </view>
     </block>
   </view>
 </view>

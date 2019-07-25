@@ -1,0 +1,95 @@
+/* pages/lessionDetail/lessionDetail.wxss */
+/* 引入模板样式 */
+@import "/pages/template/teacher/teacher.wxss"
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+/* 最上层课程图片 */
+.lession-img-container{
+  height: 400rpx;
+  width: 100%;
+}
+.lession-img{
+  height: 400rpx;
+  width: 100%;
+}
+
+/* tab切换 */
+.tab-nav-container{
+  width:100%;
+  height: 60rpx;
+  border-bottom: grey solid 1rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tab-nav{
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  line-height: 60rpx;
+}
+
+/* 这是tab切换对应的内容容器 */
+.tab-content-container{
+  width: 100%;
+}
+
+/* 单个滑块容器 */
+.swiper-item-content-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 课堂名称栏 */
+.lession-name{
+  width: 100%;
+  border-bottom: grey solid 1rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.lession-name-text{
+  font-size: 1.2rem;
+}
+.lession-name-detail{
+  font-size: 0.6rem;
+  color: grey;
+}
+/* 老师介绍栏 */
+.teacher-introduce{
+  height: 100%;
+  padding: 20rpx;
+  border-bottom: grey solid 1rpx;
+}
+
+/* 课程介绍 */
+.lession-detail{
+  padding: 20rpx;
+  /* border-bottom: grey solid 1rpx; */
+}
+
+/* 底部购买课程 */
+.lession-buy-container{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-top: grey solid 1rpx;
+  background-color: white;
+}
+.lession-buy{
+  background-color: blue;
+  line-height: 100%;
+  font-size: 2rem;
+}

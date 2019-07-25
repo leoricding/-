@@ -55,6 +55,7 @@ App({
   },
   // 全局状态
   globalData: {
-    userInfo: null
+    userInfo: null,
+    listData:null
   }
 })

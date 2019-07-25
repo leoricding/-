@@ -3,7 +3,10 @@ let localData=[
     avatar:'../../data/images/avatar/00.jpg',
     carousel:'../../data/images/carousel/00.jpg',
     lessionName:"程序员的自我修养:好好学习，天天向上",
-    persionOnline:"85"
+    persionOnline:"85",
+    name:"金不换",
+    position:"幸福集团-金牌讲师",
+    achievement:"教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员教出无数金牌学员"
   },
   {
     avatar: '../../data/images/avatar/01.jpg',

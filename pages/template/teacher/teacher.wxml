@@ -1,0 +1,11 @@
+<template name="teacher">
+  <view class="teacher-container">
+    <view class="teacher-avatar">
+      <image src="{{avatar}}"></image>
+    </view>
+    <view class="teaher-detail">
+      <view class="teacher-position"><text>{{position}}</text></view>
+      <view class="teacher-achievement"><text>{{achievement}}</text></view>
+    </view>
+  </view>
+</template>
