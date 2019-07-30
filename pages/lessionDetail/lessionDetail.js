@@ -30,14 +30,34 @@ Page({
       listData: app.globalData.listData,
       index:option.index
     })
-    // 解决swiper高度无法自适应的问题
-    wx.getSystemInfo({
-      success:  res =>{
-        this.setData({
-          clientHeight: res.windowHeight-254
-        });
-      }
-    })
+   
+    // 思路：swiper高度=通过可用屏幕高度-课程图高度-tab栏高度
+    let that=this;
+    //测试获取指定元素属性（课程图的高度）
+    wx.createSelectorQuery().selectAll('.lession-img-container').boundingClientRect(function (rect) {
+      console.log(rect[0].height)
+      //课程图高度imgHeight
+      let imgHeight = rect[0].height
 
+      //获取tab栏的高度
+      wx.createSelectorQuery().selectAll('.tab-nav-container').boundingClientRect(function (rect) {
+        //tab栏高度rect[0].height
+        console.log(rect[0].height)
+
+        //获取屏幕的可用高度
+        wx.getSystemInfo({
+          success: res => {
+            // 解决swiper高度无法自适应的问题
+            that.setData({
+              //swiper高度clientHeight
+              clientHeight: res.windowHeight - imgHeight - rect[0].height,
+            });
+          }
+        })
+        
+      }).exec()  
+      
+    }).exec()
+   
   }
 })

@@ -23,7 +23,7 @@ Page({
   // 生命周期函数，页面加载时
   onLoad: function () {
     console.log('index.js初始化')
-
+    console.log(app.globalData.userInfo)
     // 判断是否已经获取到用户信息
     if (app.globalData.userInfo) {
       // 已经获取用户信息
@@ -46,8 +46,9 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        this.routerGo()
       }
-      this.routerGo()
+      
     } else {
       // 微信不支持button.open-type.getUserInfo用法
       // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -84,25 +85,27 @@ Page({
   // 实现页面自动跳转
   routerGo(){
     console.log('跳转函数调用了')
-
+    console.log(this.hasUserInfo)
     // 定义一个周期函数interval
     // 判断image图片是否渲染，渲染成功后自动跳转
-    let interval=setInterval( ()=> {
-      if (wx.createSelectorQuery().select('image')) {
-        console.log(wx.createSelectorQuery().select('image'))
-        // 跳转
-        // 跳转成功后执行回调函数clearInterval
-        // 这里必须使用switchTab，因为设置了tabbar，navigateTo无法实现跳转
-        wx.switchTab({
-          url: './../lession/lession',
-          success:()=>{
-            console.log(this)
-            console.log("跳转成功")
-            clearInterval(interval)
-          },
-        })
-      }
-    }, 500) 
+    if(this.data.hasUserInfo){
+      let interval=setInterval( ()=> {
+        if (this.data.hasUserInfo) {
+          console.log("用户是否授权"+this.data.hasUserInfo)
+          // 跳转
+          // 跳转成功后执行回调函数clearInterval
+          // 这里必须使用switchTab，因为设置了tabbar，navigateTo无法实现跳转
+          wx.redirectTo({
+            url: './../lession/lession',
+            success:()=>{
+              console.log(this)
+              console.log("跳转成功")
+              clearInterval(interval)
+            },
+          })
+        }
+      }, 500) 
+    }
   }
  
 })

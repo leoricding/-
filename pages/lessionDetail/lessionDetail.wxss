@@ -79,7 +79,7 @@
 
 /* 底部购买课程 */
 .lession-buy-container{
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -87,6 +87,7 @@
   justify-content: flex-end;
   border-top: grey solid 1rpx;
   background-color: white;
+  z-index: 2;
 }
 .lession-buy{
   background-color: blue;
