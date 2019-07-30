@@ -9,7 +9,8 @@
   <!-- tab切换标签 -->
   <view class="tab-nav-container">
     <block wx:for="{{tabNavName}}" wx:key="{{index}}">
-      <view class="tab-nav">
+      <view class="tab-nav {{currentSelected==index?'selected':''}}"
+            bindtap="selectTab" data-index="{{index}}">
         <text>{{item}}</text>
       </view>
     </block>
@@ -17,7 +18,11 @@
 
   <!-- tab内容容器 -->
   <view class="tab-content-container">
-    <swiper  style="height: {{clientHeight?clientHeight+'px':'auto'}}" class="swiper">
+    <swiper  style="height: {{clientHeight?clientHeight+'px':'auto'}}"                 class="swiper"
+             current="{{currentSelected}}"
+             bindchange="changeTab"
+
+    >
       <swiper-item class="swiper-item">
         <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrollbot">
           <view class="swiper-item-content-container">
@@ -36,46 +41,25 @@
             <view class="lession-detail">
               <text>课程介绍</text>
               <view>
-                <text>这是课程介绍</text>
+                <text>{{listData[index].lessionDescription}}</text>
               </view>
-              <view>
-                <text>这是课程介绍</text>
-              </view>
-              <view>
-                <text>这是课程介绍</text>
-              </view>
-              <view>
-                <text>这是课程介绍</text>
-              </view>
-              <view>
-                <text>这是课程介绍</text>
-              </view>
-              <view>
-                <text>这是课程介绍</text>
-              </view>
-              <view>
-                <text>这是课程介绍</text>
-              </view>
-              <view>
-                <text>这是课程介绍</text>
-              </view>
-              <view>
-                <text>这是课程介绍</text>
-              </view>
-              <view>
-                <text>这是课程介绍2</text>
-              </view>
+              
             </view>
           </view>
         
         </scroll-view>
          <view class="lession-buy-container">
             <view class="lession-buy">
-              <text>￥45购买</text>
+              <text>￥{{listData[index].lessionPrice}}购买</text>
             </view>
           </view>
       </swiper-item>
+      <swiper-item>
+        <text>这是课程目录</text>
+      </swiper-item>
+      <swiper-item>
+        <text>这是相关课程</text>
+      </swiper-item>
     </swiper>
   </view>
- 
 </view>

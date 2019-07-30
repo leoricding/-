@@ -23,7 +23,7 @@
 .tab-nav-container{
   width:100%;
   height: 60rpx;
-  border-bottom: grey solid 1rpx;
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -31,13 +31,19 @@
 .tab-nav{
   width: 33.3%;
   height: 100%;
+  border-bottom: grey solid 1rpx;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
   line-height: 60rpx;
-}
 
+}
+/* tab被选中时的样式 */
+.tab-nav-container .selected{
+  color:cyan;
+  border-bottom:cyan solid 2rpx;
+}
 /* 这是tab切换对应的内容容器 */
 .tab-content-container{
   width: 100%;
